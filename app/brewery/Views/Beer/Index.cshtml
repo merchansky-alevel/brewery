@@ -1,7 +1,29 @@
-﻿
+﻿@model IEnumerable<ResourcesLibrary.Models.Beer>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Beer";
 }
 
 <h2>Beer menu</h2>
 
+<div>
+    <div>
+        <h3>Beer list:</h3>
+    </div>
+    <div>
+        @{
+            foreach(var beerItem in Model)
+            {
+            <div>
+                <hr />
+                <p><b>Name: </b></p>
+                <p>@beerItem.Name</p>
+                <br />
+                <p><b>Price: </b></p>
+                <p>@beerItem.Price</p>
+                @Html.ActionLink($"View more about {beerItem.Name}", "Index", "GetGoodInfo")
+                <hr />
+            </div>
+            }
+        }
+    </div>
+</div>

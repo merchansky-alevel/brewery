@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ResourcesLibrary.Models;
+using ResourcesLibrary.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,9 @@ namespace brewery.Controllers
         // GET: Beer
         public ActionResult Index()
         {
-            return View();
+            var beerList = new BeerService().GetAll();
+
+            return View(beerList);
         }
     }
 }
