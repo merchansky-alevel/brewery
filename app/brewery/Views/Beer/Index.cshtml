@@ -20,7 +20,7 @@
                 <br />
                 <p><b>Price: </b></p>
                 <p>@beerItem.Price</p>
-                @Html.ActionLink($"View more about {beerItem.Name}", "Index", "GetGoodInfo")
+                <a href="/Beer/GetItem/@beerItem.Id">View more about @beerItem.Name</a>
                 <hr />
             </div>
             }

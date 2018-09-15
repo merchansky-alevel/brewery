@@ -17,5 +17,13 @@ namespace brewery.Controllers
 
             return View(beerList);
         }
+
+        [HttpGet]
+        public ActionResult GetItem(int id)
+        {
+            var beerItem = new BeerService().Get(id);
+            
+            return View(beerItem);
+        }
     }
 }
