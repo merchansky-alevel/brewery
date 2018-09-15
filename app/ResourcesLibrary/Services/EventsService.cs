@@ -23,5 +23,10 @@ namespace ResourcesLibrary.Services
         {
             return _events.FirstOrDefault(x => x.Id == id);
         }
+
+        public List<Event> GetAll()
+        {
+            return _events;
+        }
     }
 }
