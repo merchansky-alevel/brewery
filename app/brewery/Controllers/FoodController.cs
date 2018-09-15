@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace brewery.Controllers
 {
-    public class HomeController : Controller
+    public class FoodController : Controller
     {
+        // GET: Food
         public ActionResult Index()
         {
             return View();
