@@ -27,5 +27,23 @@ namespace brewery.Controllers
                 action = "Index",
             });
         }
+
+        [HttpGet]
+        public ActionResult Beer()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Food()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Events()
+        {
+            return View();
+        }
     }
 }

@@ -3,24 +3,10 @@
     ViewBag.Title = "Admin panel";
 }
 
-<h2>Index</h2>
+<h2>Admin-panel</h2>
 
-@using (Html.BeginForm("Add", "Admin", FormMethod.Post))
-{
-    <table>
-        <tbody>
-            <tr>
-                @Html.TextBox("Name", "Set beer name:")
-            </tr>
-            <tr>
-                @Html.TextBox("Price", "Set beer price:")
-            </tr>
-            <tr>
-                @Html.TextBox("Description", "Set beer description:")
-            </tr>
-            <tr>
-                <td><input type="submit" value="Add" /> </td>
-            </tr>
-        </tbody>
-    </table>
-}
+<ol>
+    <li>@Html.ActionLink("Add beer", "Beer", "Admin")</li>
+    <li>@Html.ActionLink("Add food", "Food", "Admin")</li>
+    <li>@Html.ActionLink("Add Event", "Events", "Admin")</li>
+</ol>

@@ -213,6 +213,10 @@
     <Content Include="Views\Gallery\Index.cshtml" />
     <Content Include="Views\Beer\GetItem.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Beer.cshtml" />
+    <Content Include="Views\Admin\Food.cshtml" />
+    <Content Include="Views\Admin\Events.cshtml" />
+    <Content Include="Views\Admin\Partials\CreateForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
