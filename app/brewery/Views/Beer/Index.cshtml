@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<ResourcesLibrary.Models.Beer>
+
 @{
     ViewBag.Title = "Beer";
+    string currency = "UAH";
 }
 
 <h2>Beer menu</h2>
@@ -11,7 +13,7 @@
     </div>
     <div>
         @{
-            foreach(var beerItem in Model)
+            foreach (var beerItem in Model)
             {
             <div>
                 <hr />
@@ -19,7 +21,7 @@
                 <p>@beerItem.Name</p>
                 <br />
                 <p><b>Price: </b></p>
-                <p>@beerItem.Price</p>
+                <p>@beerItem.Price @currency.</p>
                 <a href="/Beer/GetItem/@beerItem.Id">View more about @beerItem.Name</a>
                 <hr />
             </div>

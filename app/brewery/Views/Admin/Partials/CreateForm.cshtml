@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Create-form";
+}
+
+<h2>Create form</h2>
+
+@using (Html.BeginForm("Add", "Admin", FormMethod.Post))
+{
+    <table>
+        <tbody>
+            <tr>
+                @Html.TextBox("Name", "Set item name:")
+            </tr>
+            <tr>
+                @Html.TextBox("Price", "Set item price:")
+            </tr>
+            <tr>
+                @Html.TextBox("Description", "Set item description:")
+            </tr>
+            <tr>
+                <td><input type="submit" value="Add" /> </td>
+            </tr>
+        </tbody>
+    </table>
+}
